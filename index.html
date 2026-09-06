@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4-Week High-Protein Vegetarian Budget Meal Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <div>
+        <p class="eyebrow">Interactive cookbook site</p>
+        <h1>4-Week High-Protein Vegetarian Budget Meal Planner</h1>
+        <p class="subtitle">Tuesday–Monday plan · £50 weekly shopping cap · one person all day + dinner for two</p>
+      </div>
+      <div class="hero-card">
+        <strong>Privacy checked</strong>
+        <span>No names, emails or private details included.</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="topnav" aria-label="Main navigation">
+    <a href="#overview">Overview</a>
+    <a href="#meal-plans">Meal plans</a>
+    <a href="#shopping">Shopping</a>
+    <a href="#batch">Batch cooking</a>
+    <a href="#recipes">Recipes</a>
+  </nav>
+
+  <main>
+    <section id="overview" class="panel overview">
+      <div class="section-head">
+        <p class="eyebrow">Start here</p>
+        <h2>At-a-glance dashboard</h2>
+      </div>
+      <div class="stats" id="stats"></div>
+      <p class="note" id="budget-note"></p>
+      <div class="tool-row no-print">
+        <button onclick="window.print()">Print current page</button>
+        <button id="expandAll">Expand all recipes</button>
+        <button id="collapseAll">Collapse all recipes</button>
+      </div>
+    </section>
+
+    <section id="meal-plans" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Printable noticeboard pages</p>
+        <h2>Meal plans</h2>
+        <p>Each week runs Tuesday to Monday. Recipe numbers link to the recipe cards below.</p>
+      </div>
+      <div class="tabs no-print" id="weekTabs"></div>
+      <div id="mealPlans"></div>
+    </section>
+
+    <section id="shopping" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Carry-forward aware</p>
+        <h2>Shopping lists</h2>
+        <p>Items marked as carry-forward are still needed, but should be checked at home before buying again.</p>
+      </div>
+      <div class="tabs no-print" id="shopTabs"></div>
+      <div id="shoppingLists"></div>
+    </section>
+
+    <section id="batch" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Monday and Thursday</p>
+        <h2>Batch cooking guide</h2>
+        <p>Exact household quantities are shown. Breakfast, lunch and snacks are for one; dinners are for two.</p>
+      </div>
+      <div class="tabs no-print" id="batchTabs"></div>
+      <div id="batchGuides"></div>
+    </section>
+
+    <section id="recipes" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Cookbook</p>
+        <h2>Recipe cards</h2>
+        <p>Grouped by course, then alphabetically. Search by title, ingredient or recipe number.</p>
+      </div>
+      <div class="filters no-print">
+        <input id="recipeSearch" type="search" placeholder="Search recipes, ingredients or R-number…" />
+        <select id="courseFilter"><option value="all">All courses</option></select>
+      </div>
+      <div id="recipeCards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Budget meal-planning site generated from the cookbook project. Prices are planning estimates and may vary by store, promotion and date.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
